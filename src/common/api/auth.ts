@@ -11,10 +11,18 @@ export const signUp = async (data: {
   password: string;
 }): Promise<AxiosResponse<AuthInResponse>> => {
   try {
-    const response = await todoAPI.post("auth/signup", {
-      email: data.email,
-      password: data.password,
-    });
+    const response = await todoAPI.post(
+      "auth/signup",
+      {
+        email: data.email,
+        password: data.password,
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     return response;
   } catch (e) {
     if (axios.isAxiosError(e)) {
@@ -29,10 +37,18 @@ export const signIn = async (data: {
   password: string;
 }): Promise<AxiosResponse<AuthInResponse>> => {
   try {
-    const response = await todoAPI.post("auth/signin", {
-      email: data.email,
-      password: data.password,
-    });
+    const response = await todoAPI.post(
+      "auth/signin",
+      {
+        email: data.email,
+        password: data.password,
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     return response;
   } catch (e) {
     if (axios.isAxiosError(e)) {
