@@ -4,8 +4,10 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import MainLayout from "./layouts/MainLayout";
 import AuthLayout from "./layouts/AuthLayout";
+import { getCurrentUser } from "./common/api/auth";
 
 export const Router = () => {
+  const token = getCurrentUser();
   return useRoutes([
     {
       element: <MainLayout />,
@@ -16,6 +18,10 @@ export const Router = () => {
       children: [
         { path: "/signin", element: <SignIn /> },
         { path: "/signup", element: <SignUp /> },
+        {
+          path: "",
+          element: !token ? <Navigate replace to="signin" /> : <></>,
+        },
       ],
     },
   ]);
