@@ -8,28 +8,28 @@ export interface Todo {
   userId: number;
 }
 
-interface CreateTodoParams {
-  token: string;
+interface PostTodoParams {
+  token: string | null;
   todo: string;
 }
 
 interface GetTodosParams {
-  token: string;
+  token: string | null;
 }
 
-interface UpdateTodoParams {
-  token: string;
+interface PutTodoParams {
+  token: string | null;
   id: number;
   todo: string;
   isCompleted: boolean;
 }
 
 interface DeleteTodoParams {
-  token: string;
+  token: string | null;
   id: number;
 }
 
-export const createTodo = async (params: CreateTodoParams): Promise<Todo> => {
+export const postTodo = async (params: PostTodoParams): Promise<Todo> => {
   try {
     const response = await todoAPI.post(
       "todos",
@@ -67,7 +67,7 @@ export const getTodos = async (params: GetTodosParams): Promise<Todo[]> => {
   }
 };
 
-export const updateTodo = async (params: UpdateTodoParams): Promise<Todo> => {
+export const putTodo = async (params: PutTodoParams): Promise<Todo> => {
   try {
     const response = await todoAPI.put(
       `todos/${params.id}`,
