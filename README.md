@@ -8,11 +8,13 @@
 
 https://main--pre-onboarding-11th-1-11.netlify.app/
 
-<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/85114315/244940283-5a2bc022-b200-40c0-8ffa-99c37066f9e3.gif" width="700" height="400" />
+![Login](https://github.com/pre-onboarding-11th-11team/pre-onboarding-11th-1-11/assets/99343081/15a5c910-7baa-4003-92bf-5199a8aabb78)
 
-회원가입과 로그인 시연 영상입니다.
 
-<img src="https://github.com/RumbleBi/wanted-pre-onboarding-frontend/assets/85114315/478cb7f9-cc67-4d64-8475-b9da8c257d0f" width="700" height="400" />
+
+로그인 시연 영상입니다.
+
+![todo](https://github.com/pre-onboarding-11th-11team/pre-onboarding-11th-1-11/assets/99343081/8c99db67-8729-4584-a14b-89c2be9acde0)
 
 투두 리스트에서 기본적인 CRUD 시연 영상입니다.
 
