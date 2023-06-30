@@ -6,8 +6,7 @@
 
 ## Intro
 
-배포링크
-
+https://main--pre-onboarding-11th-1-11.netlify.app/
 
 <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/85114315/244940283-5a2bc022-b200-40c0-8ffa-99c37066f9e3.gif" width="700" height="400" />
 
