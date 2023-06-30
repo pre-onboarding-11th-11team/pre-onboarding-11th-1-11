@@ -24,7 +24,46 @@
 
 ## Directory
 
-완성되면 폴더 구조 넣을 예정입니다.
+```
+src
+ ┣ common
+ ┃ ┣ api
+ ┃ ┃ ┣ auth.ts
+ ┃ ┃ ┣ config.ts
+ ┃ ┃ ┗ todo.ts
+ ┃ ┗ hooks
+ ┃ ┃ ┣ useAuth.ts
+ ┃ ┃ ┗ useTodo.ts
+ ┣ components
+ ┃ ┣ auth
+ ┃ ┃ ┣ SignInForm.styles.ts
+ ┃ ┃ ┣ SignInForm.tsx
+ ┃ ┃ ┣ SignUpForm.styles.ts
+ ┃ ┃ ┗ SignUpForm.tsx
+ ┃ ┣ todo
+ ┃ ┃ ┣ NewTodo.styles.ts
+ ┃ ┃ ┣ NewTodo.tsx
+ ┃ ┃ ┣ TodoItem.styles.ts
+ ┃ ┃ ┣ TodoItem.tsx
+ ┃ ┃ ┣ TodoList.styles.ts
+ ┃ ┃ ┗ TodoList.tsx
+ ┃ ┗ Input.tsx
+ ┣ layouts
+ ┃ ┣ AuthLayout.tsx
+ ┃ ┗ MainLayout.tsx
+ ┣ pages
+ ┃ ┣ Main.tsx
+ ┃ ┣ SignIn.tsx
+ ┃ ┗ SignUp.tsx
+ ┣ styles
+ ┃ ┗ globalStyles.ts
+ ┣ utils
+ ┃ ┗ validations.ts
+ ┣ App.tsx
+ ┣ index.tsx
+ ┣ react-app-env.d.ts
+ ┗ router.tsx
+```
 
 <br>
 
