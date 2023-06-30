@@ -40,7 +40,7 @@ const useAuth = () => {
       if (res && res.status === 200) {
         localStorage.setItem("access-token", res.data.access_token);
         alert("로그인 성공!");
-        navigate("/todos");
+        navigate("/todo");
       }
     } catch (error) {
       if (error === 404) {
