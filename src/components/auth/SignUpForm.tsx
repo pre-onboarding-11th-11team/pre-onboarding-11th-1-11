@@ -1,5 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-
+import { FormWrap, FormBtn } from "./SignUpForm.styles";
 import Input from "../Input";
 
 import { validationSchema } from "../../utils/validations";
@@ -51,38 +51,33 @@ const SignUpForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <FormWrap onSubmit={handleSubmit}>
       <Input
-        data-testid="email-input"
-        type="text"
-        label="email"
-        name="email"
+        data-testid='email-input'
+        type='text'
+        label='email'
+        name='email'
         value={values.email}
         error={errors?.email}
         onChange={handleValuesChange}
       />
       <Input
-        data-testid="password-input"
-        type="password"
-        label="password"
-        name="password"
+        data-testid='password-input'
+        type='password'
+        label='password'
+        name='password'
         value={values.password}
         error={errors?.password}
         onChange={handleValuesChange}
       />
-      <button
-        data-testid="signup-button"
-        type="submit"
-        disabled={
-          !!!values.email ||
-          !!!values.password ||
-          !!errors.email ||
-          !!errors.password
-        }
+      <FormBtn
+        data-testid='signup-button'
+        type='submit'
+        disabled={!!!values.email || !!!values.password || !!errors.email || !!errors.password}
       >
         회원가입
-      </button>
-    </form>
+      </FormBtn>
+    </FormWrap>
   );
 };
 
