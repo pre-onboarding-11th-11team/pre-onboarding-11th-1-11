@@ -1,6 +1,7 @@
 import { ChangeEvent, useEffect, useState } from "react";
 import { Todo } from "../../common/api/todo";
 import useTodo from "../../common/hooks/useTodo";
+import { TodoItemWrapper } from "./TodoItem.styles";
 
 interface Props {
   todo: Todo;
@@ -46,7 +47,7 @@ const TodoItem = ({ todo }: Props) => {
   }, [todo]);
 
   return (
-    <div>
+    <TodoItemWrapper>
       <label>
         <input
           type="checkbox"
@@ -99,7 +100,7 @@ const TodoItem = ({ todo }: Props) => {
           삭제
         </button>
       </div>
-    </div>
+    </TodoItemWrapper>
   );
 };
 

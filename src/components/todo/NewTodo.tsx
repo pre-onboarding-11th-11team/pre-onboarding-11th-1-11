@@ -1,5 +1,6 @@
 import React, { ChangeEvent, useState } from "react";
 import useTodo from "../../common/hooks/useTodo";
+import { TodoListWriteWrapper } from "./NewTodo.styles";
 
 const NewTodo = () => {
   const { addTodo } = useTodo();
@@ -15,12 +16,12 @@ const NewTodo = () => {
   };
 
   return (
-    <div>
+    <TodoListWriteWrapper>
       <input data-testid="new-todo-input" onChange={handleNewTodoChange} />
       <button data-testid="new-todo-add-button" onClick={handleAddTodoClick}>
         추가
       </button>
-    </div>
+    </TodoListWriteWrapper>
   );
 };
 
