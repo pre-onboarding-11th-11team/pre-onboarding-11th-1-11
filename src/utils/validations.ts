@@ -12,7 +12,7 @@ interface Validation {
 export const validationSchema: { [key: string]: Validation } = {
   email: {
     pattern: {
-      value: "^[a-zA-Z0-9+-_.]+@[a-zA-Z0-9-]+$",
+      value: "^[a-zA-Z0-9+-_.]+@[a-zA-Z0-9-_.]+$",
       message: "이메일 형식이 올바르지 않습니다.",
     },
   },
