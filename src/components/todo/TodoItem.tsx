@@ -1,13 +1,14 @@
 import { ChangeEvent, useEffect, useState } from "react";
 import { Todo } from "../../common/api/todo";
-import useTodo from "../../common/hooks/useTodo";
+import useTodos from "../../common/hooks/useTodos";
 import { TodoItemWrapper } from "./TodoItem.styles";
 
 interface Props {
   todo: Todo;
+  updateTodo: (todoItem: Todo) => void;
+  removeTodo: (id: number) => void;
 }
-const TodoItem = ({ todo }: Props) => {
-  const { removeTodo, updateTodo } = useTodo();
+const TodoItem = ({ todo, updateTodo, removeTodo }: Props) => {
   const [todoItem, setTodoItem] = useState<Todo>(todo);
   const [update, setUpdate] = useState<boolean>(false);
 

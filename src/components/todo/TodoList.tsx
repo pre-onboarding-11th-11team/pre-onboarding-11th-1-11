@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import useTodo from "../../common/hooks/useTodo";
+import useTodos from "../../common/hooks/useTodos";
 import TodoItem from "./TodoItem";
 import NewTodo from "./NewTodo";
 import {
@@ -10,11 +10,7 @@ import {
 } from "./TodoList.styles";
 
 const TodoList = () => {
-  const { todos, fetchTodos } = useTodo();
-
-  useEffect(() => {
-    fetchTodos();
-  }, []);
+  const { todos, addTodo, updateTodo, removeTodo } = useTodos();
 
   return (
     <Wrapper>
@@ -24,10 +20,17 @@ const TodoList = () => {
       <TodoListWrapper>
         <div>
           {todos &&
-            todos.map((todo, idx) => <TodoItem key={idx} todo={todo} />)}
+            todos.map((todo, idx) => (
+              <TodoItem
+                key={idx}
+                todo={todo}
+                updateTodo={updateTodo}
+                removeTodo={removeTodo}
+              />
+            ))}
         </div>
       </TodoListWrapper>
-      <NewTodo />
+      <NewTodo addTodo={addTodo} />
     </Wrapper>
   );
 };

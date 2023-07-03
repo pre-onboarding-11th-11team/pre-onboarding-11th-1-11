@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Todo, deleteTodo, getTodos, postTodo, putTodo } from "../api/todo";
 import { getCurrentUser } from "../api/auth";
 
-const useTodo = () => {
+const useTodos = () => {
   const token = getCurrentUser();
   const [todos, setTodos] = useState<Todo[] | null>(null);
 
@@ -55,6 +55,10 @@ const useTodo = () => {
     }
   };
 
+  useEffect(() => {
+    fetchTodos();
+  }, []);
+
   return {
     todos,
     addTodo,
@@ -64,4 +68,4 @@ const useTodo = () => {
   };
 };
 
-export default useTodo;
+export default useTodos;

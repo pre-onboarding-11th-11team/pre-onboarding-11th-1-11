@@ -1,9 +1,12 @@
-import React, { ChangeEvent, useState } from "react";
-import useTodo from "../../common/hooks/useTodo";
+import { ChangeEvent, useState } from "react";
+
 import { TodoListWriteWrapper } from "./NewTodo.styles";
 
-const NewTodo = () => {
-  const { addTodo } = useTodo();
+interface Props {
+  addTodo: (newTodo: string) => void;
+}
+
+const NewTodo = ({ addTodo }: Props) => {
   const [newTodo, setNewTodo] = useState<string>("");
 
   const handleNewTodoChange = (e: ChangeEvent<HTMLInputElement>) => {
